@@ -1,0 +1,69 @@
+<ion-content padding>
+  <h6 text-center margin-vertical>{{ pagetitle }}</h6>
+  <div text-center large margin-vertical>
+     <ion-icon [name]="pin.length>0 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>1 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>2 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>3 ? 'radio-button-on' : 'radio-button-off'"></ion-icon> 
+  </div>
+
+  <div>
+    <ion-grid text-center>
+      <ion-row>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('1')">1</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('2')">2</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('3')">3</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('4')">4</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('5')">5</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('6')">6</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('7')">7</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('8')">8</button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('9')">9</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+
+        </ion-col>
+        <ion-col>
+          <button ion-button round large outline (click)="handleInput('0')">0</button>
+        </ion-col>
+        <ion-col>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button ion-button clear large no-padding (click)="handleInput('clear')">Clear</button>
+        </ion-col>
+        <ion-col>
+
+        </ion-col>
+        <ion-col>
+          <button ion-button clear large (click)="emitEvent()">OK</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

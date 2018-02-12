@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Component Example
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div text-center *ngIf="!ShowPin">
+     <button ion-button clear large (click)="showPin()">Enter Pin</button>
+     <br>
+     <label *ngIf="Pin">Pin entered is {{Pin}}</label>
+  </div>
+ 
+<custom-pin *ngIf="ShowPin" pagetitle="Enter The Pin" (change)="eventCapture($event)"></custom-pin>
+</ion-content>
